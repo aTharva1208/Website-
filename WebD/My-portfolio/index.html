@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="portfolio.css" type="text/css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <!-- <img src="images/logo.png" class="logo" /> -->
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Data scientist and Data analyst</p>
+          <h1>
+            Hi, I'm <span>Atharva </span><br />
+            Donode from India
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p>
+              🚀 Aspiring Computer Science student with a passion for blending
+              technology and creativity. Eager(enthusiastic, keen, or excited) to tackle challenges and
+              constantly learn new skills. From coding to design, I love turning
+              ideas into reality. Let's connect and explore the possibilities!
+            </p>
+            <div class="tab-titles">
+                <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('Experiance')">Experiance</p>
+                <p class="tab-links" onclick="opentab('Education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Data scientist</span><br>Data analyst</li>
+                    <li><span>Web Development</span><br>Web app Development</li>
+                    <li><span>App Development</span><br>Building Android apps</li>
+                </ul>
+            </div>
+            <div class="tab-contents"  id="Experiance">
+                <ul>
+                    <!-- <li><span>Data scientist</span><br>Data analyst</li>
+                    <li><span>Web Development</span><br>Web app Development</li>
+                    <li><span>App Development</span><br>Building Android apps</li> -->
+                </ul>
+            </div>
+            <div class="tab-contents" id="Education">
+                <ul>
+                    <li><span>2022</span><br>Diploma from Gov. Polytechnic Nagpur</li>
+                    <li><span>2025</span><br>B.Tech from YCCE Nagpur</li>
+                    <!-- <li><span>App Development</span><br>Building Android apps</li> -->
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+      }
+      function opentab(tabname){
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    
+    </script>
+  </body>
+</html>
